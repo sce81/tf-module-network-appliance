@@ -1,11 +1,12 @@
 # tf-module-network-appliance
 Terraform module for creating a virtual network appliance - eg: a firewall. 
 
-Creates 3x Network Interfaces and expects 3 subnet tiers - public, management and private. 
-Creates an EIP and attaches it to the primary interface (expected to be located in the public subnet)
-Expects security groups and IAM roles to be created externally to the module.
-Tested with Palo Alto Network Appliance, but should be compatible with applicances from other vendors. 
-NB: Palo Altos expect the management interface to be swapped to ensure the interfaces line up as intended. execute: **mgmt-interface-swap=enable** in userdata to action this change. 
+Creates 3x Network Interfaces and expects 3 subnet tiers - public, management and private.  
+Creates an EIP and attaches it to the primary interface (expected to be located in the public subnet).  
+Expects security groups and IAM roles to be created externally to the module.  
+Tested with Palo Alto Network Appliance, but should be compatible with applicances from other vendors.   
+NB: Palo Altos expect the management interface to be swapped to ensure the interfaces line up as intended.  
+Execute: **mgmt-interface-swap=enable** in userdata to action this change. 
 
 ##### Usage
 
