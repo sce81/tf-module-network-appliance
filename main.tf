@@ -36,7 +36,8 @@ resource "aws_instance" "main" {
 resource "aws_network_interface" "public" {
   subnet_id                             = element(var.pub_subnet_ids, var.number)
   security_groups                       = var.pub_security_group_ids
-  source_dest_check                     = var.source_dest_check
+  source_dest_check                     = var.pub_source_dest_check
+
   
   tags = merge(
         local.common_tags, var.extra_tags,
@@ -49,7 +50,8 @@ resource "aws_network_interface" "public" {
 resource "aws_network_interface" "management" {
   subnet_id                             = element(var.mgmt_subnet_ids, var.number)
   security_groups                       = var.mgmt_security_group_ids
-  source_dest_check                     = var.source_dest_check
+  source_dest_check                     = var.mgmt_source_dest_check
+
   
   tags = merge(
         local.common_tags, var.extra_tags,
@@ -61,7 +63,8 @@ resource "aws_network_interface" "management" {
 resource "aws_network_interface" "private" {
   subnet_id                             = element(var.priv_subnet_ids, var.number)
   security_groups                       = var.priv_security_group_ids
-  source_dest_check                     = var.source_dest_check
+  source_dest_check                     = var.priv_source_dest_check
+
   
   tags = merge(
         local.common_tags, var.extra_tags,

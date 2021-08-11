@@ -8,6 +8,7 @@ Tested with Palo Alto Network Appliance, but should be compatible with applicanc
 NB: Palo Altos expect the management interface to be swapped to ensure the interfaces line up as intended.  
 Execute: **mgmt-interface-swap=enable** in userdata to action this change. 
 
+
 ##### Usage
 
     module "paloalto" {
