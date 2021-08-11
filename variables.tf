@@ -6,14 +6,14 @@ variable "name"                                           {}
 variable "pub_subnet_ids"                                 {type = list}
 variable "mgmt_subnet_ids"                                {type = list}
 variable "priv_subnet_ids"                                {type = list}
-
-//variable "subnet_ids"                                     {}
 variable "instance_profile"                               {}
 variable "number"                                         {default  = 00}
 variable "instance_type"                                  {default  = "m5.large"}
 variable "disable_api_termination"                        {default  = "true"}
 variable "project"                                        {default  = "shared"}
-variable "source_dest_check"                              {default  = true}
+variable "pub_source_dest_check"                          {default  = true}
+variable "mgmt_source_dest_check"                         {default  = true}
+variable "priv_source_dest_check"                         {default  = true}
 variable "pub_security_group_ids"                         {type     = list}
 variable "mgmt_security_group_ids"                        {type     = list}
 variable "priv_security_group_ids"                        {type     = list}
